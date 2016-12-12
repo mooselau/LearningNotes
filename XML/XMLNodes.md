@@ -58,7 +58,7 @@ Look at the usage below:
 <!ENTITY entity-name "entity-content"
 ]>
 ```
-And a example:
+And an example:
 ```xml
 <!DOCTYPE note [
 <!ENTITY copyright "Moose Liu"
