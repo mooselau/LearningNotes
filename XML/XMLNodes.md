@@ -8,7 +8,7 @@ XML has a structure, which looks like:
 <root>
     <header>
         <title>I am title.</title>
-    </hearder>
+    </header>
     <body>
         <content>I am content.</content>
     </body>
@@ -21,7 +21,7 @@ And, every element in this XML is an element node, such as: "header", "title", "
 The text in the XML elements are called "text nodes", e.g. "I am title", "I am content." .
 
 If a node is wrote in a stucture like below:
-````
+````xml
 <body>
     <content font-size="20"> I am content.</content>
     <!-- <info>This is hidden info.</info> -->
@@ -53,10 +53,13 @@ Except the types mentioned above, there are totally 12 types of XML nodes in a X
 The Nodes with number 10, 11 usually come in the header part in a XML as part of document declaration, and moreover, node type of 5 and 6 usually show up inside a Document declaration.
 
 Look at the usage below:
+```xml
 <!DOCTYPE filename [
 <!ENTITY entity-name "entity-content"
 ]>
+```
 And a example:
+```xml
 <!DOCTYPE note [
 <!ENTITY copyright "Moose Liu"
 ]>
@@ -64,7 +67,7 @@ And a example:
     <text>This is text.</text>
     <writer>&copyright;</writer>
 </content>
-
+```
 Still have no clue on the notation node :-(, but these are already enough for processing most of the standard XML files.
 
 #### Use JAVA to process XML as DOM object
