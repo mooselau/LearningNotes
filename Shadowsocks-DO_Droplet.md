@@ -7,7 +7,7 @@
 - [部署 Shadowsocks](#部署-shadowsocks)
     +   配置ENV环境
     +   非Docker直接安装使用
-    +   安装 Docker
+    +   配置 Docker
         *   制作 Docker Image
         *   运行 Docker SS   
 - [连接测试](#连接测试)
@@ -84,7 +84,7 @@ less /var/log/shadowsocks.log
 
 更多命令可以查看SS的[Github Page](https://github.com/shadowsocks/shadowsocks/blob/master/README.md).
 
-#### 安装Docker
+#### 配置Docker
 由于原本的安装配置就不太复杂，所以使用Docker在这里也很简单。
 下面的内容主要是自行制作Docker Image， 以及如何运行这个Docker Image。 由于Image的设计制作可以多种多样，所以运行的方法也都各异。
 
