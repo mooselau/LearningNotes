@@ -118,7 +118,7 @@ docker run -d --name ss --hostname ss -p 8388:8388 -p 1080:1080 shadowsocks
 docker ps
 ```
 
-<img src="./Images/Shadowsocks/Docker-ps-result.png" width="60%" height="150">
+<img src="./Images/Shadowsocks/Docker-ps-result.png" width="50%" height="100">
 
 以及查看logs来确认Shadowsocks的服务状况：
 ```docker
@@ -148,7 +148,7 @@ Andriod手机端，可以通过Google Play安装Shadowsocks客户端来使用我
 MAC端的Client名称叫做“ShadowsocksX”，我用的版本是2.6.3。貌似这个版本跟之前更早的版本所具有的功能不太一样，这使得我们不能够自定义本地开放的端口。（同时也不确定它默认开放的是不是1080，另外所有的log需要在系统log中搜索查看。）
 SSX主界面：
 
-<img src="/Images/Shadowsocks/ShadowsocksX.png" width="30%" height="360">
+<img src="/Images/Shadowsocks/ShadowsocksX.png" width="20%" height="260">
 
 SSX服务器配置：
 
@@ -162,7 +162,7 @@ SSX服务器配置：
 第一步需要从网上下载GoAgent，我目前使用的版本是v2.3.7(build 774)。
 新建并配置好服务器信息：
 
-<img src="/Images/Shadowsocks/GoAgent-Setup.png" width="50%" height="340">
+<img src="/Images/Shadowsocks/GoAgent-Setup.png" width="45%" height="320">
 
 “Turn On”连接，查看logs：
 
@@ -182,7 +182,7 @@ SSX服务器配置：
 
 最后，选中SwitchyOmega的auto-switch模式：
 
-<img src="/Images/Shadowsocks/SwitchyOmega-3.png" alt="SO-SelectMode" width="30%" height="300">
+<img src="/Images/Shadowsocks/SwitchyOmega-3.png" alt="SO-SelectMode" width="20%" height="240">
 
 这样，所有需要代理的站点将会自动走proxy（即通过本地1080端口来对接上GoAgent，而GoAgent这时已经连接上我们的SS Server了），其他站点则会使用直接访问。
 
