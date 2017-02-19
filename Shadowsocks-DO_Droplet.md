@@ -3,8 +3,8 @@
 这篇文章会主要用来介绍自己在DO上搭建Shadowsocks(SS)的过程，后期会不间断更新完善。。
 附上SS的地址：https://github.com/shadowsocks, https://shadowsocks.org/en/index.html。
 
-- [新建DO-Droplet](#新建DO Droplet)
-- [部署 Shadowsocks](#部署 Shadowsocks)
+- [新建DO-Droplet](#新建DO-Droplet)
+- [部署 Shadowsocks](#部署-Shadowsocks)
     +   配置ENV环境
     +   非Docker直接安装使用
     +   安装 Docker
