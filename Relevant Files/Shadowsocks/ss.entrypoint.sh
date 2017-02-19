@@ -1,4 +1,5 @@
 # !/bin/bash
+# Maintained by Moose Liu. (20.02.2017)
 
 # Setting up variables if it is not set 
 : ${password:=yourpassword}
