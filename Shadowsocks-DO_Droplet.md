@@ -93,7 +93,7 @@ P.S.所有制作的源文件都附件在了文末。
 
 ##### 制作Docker Image
 制作Docker Image需要用到docker build命令跟dockerfile文件。我自己制作的dockerfile文件主要是在作为base image的centos上安装了提供SS运行的环境，然后将一个entrypoint shell脚本拷贝到该image当中，并且打开默认通信端口8388。
-关于Dockerfile的具体信息可以参考这个[makessimage.dockerfile](./Relevant Files/Shadowsocks/makessimage.dockerfile)。
+关于Dockerfile的具体信息可以参考这个[makessimage.dockerfile](./Relevant Files/Shadowsocks/ubuntu-ss.dockerfile)。
 
 下面是用docker build命令通过Dockerfile来制作Docker Image文件：
 
