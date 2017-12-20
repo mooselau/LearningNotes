@@ -93,7 +93,7 @@ P.S.所有制作的源文件都附件在了文末。
 
 ##### 制作Docker Image
 制作Docker Image需要用到docker build命令跟dockerfile文件。我自己制作的dockerfile文件主要是在作为base image的centos上安装了提供SS运行的环境，然后将一个entrypoint shell脚本拷贝到该image当中，并且打开默认通信端口8388。
-关于Dockerfile的具体信息可以参考这个[makessimage.dockerfile](./Relevant Files/Shadowsocks/ubuntu-ss.dockerfile)。
+关于Dockerfile的具体信息可以参考这个[dockerfile](./RelevantFiles/Shadowsocks/ubuntu-ss.dockerfile)。
 
 下面是用docker build命令通过Dockerfile来制作Docker Image文件：
 
@@ -104,7 +104,7 @@ docker build -t shadowsocks .
 注意最后一个点（.）指示dockerfile所在的文件夹 为当前文件夹。另外，centos的docker image可能也需要提前使用“docker pull”拉下来。
 
 ##### 运行Docker Image
-上一个step在制作Image的时候，由于引进了一个entrypoint.sh，于是就可以通过在entrypoint里面增加步骤来启动我们的shadowsocks。关于entrypoint的脚本具体可以参考这个[entrypoint.sh](./Relevant Files/Shadowsocks/ss.entrypoint.sh)
+上一个step在制作Image的时候，由于引进了一个entrypoint.sh，于是就可以通过在entrypoint里面增加步骤来启动我们的shadowsocks。关于entrypoint的脚本具体可以参考这个[entrypoint.sh](./RelevantFiles/Shadowsocks/ss.entrypoint.sh)
 
 首先，就是在启动脚本(entrypoint.sh)中增加内容来创建shadowsocks.json文件，将基本的信息填进去。然后就是启动shadowsocks的服务。（由于以后可能需要重新启动这个container，所以，在启动脚本里也可以添加判断步骤在重启后立即启动服务。）
 
