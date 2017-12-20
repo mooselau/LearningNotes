@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # Maintained by Moose Liu. (20.02.2017)
 
 # Setting up variables if it is not set 
@@ -31,3 +31,6 @@ echo "Starting Service.."
 
  # To run SS in the foreground:
 ssserver -c /etc/shadowsocks.json
+
+# more about shadowsocks on wiki page: 
+# https://github.com/shadowsocks/shadowsocks/wiki
