@@ -1,14 +1,20 @@
 #!/bin/bash
-# Maintained by Moose Liu. (20.02.2017)
+# Maintained by Moose Liu. (07.01.2018)
 
 # Setting up variables if it is not set 
 : ${password:=yourpassword}
 : ${server_port:=8388}
 : ${local_port:=1080}
+: ${network_iface:=eth0}
 
 # default is root user
 
 if [ ! -e "/etc/shadowsocks.json" ] ; then
+	echo "First time starts, configuration is ongoing.."
+
+	echo "Creating database for vnstatd.."
+	vnstat --create -i $network_iface
+
 	echo "Generating config file for SS.."
 	# Create config file
 	touch /etc/shadowsocks.json

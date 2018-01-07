@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:7.3
 MAINTAINER mooseliu@hotmail.co.uk
 
 WORKDIR /root
@@ -9,7 +9,11 @@ RUN 	yum update -y && \
 		easy_install pip && \
 		pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 
-RUN 	yum install -y net-tools
+# install tools and epel-release, vnstat to monitor network interface data flow
+# vnstat version 1.15
+RUN 	yum install -y net-tools epel-release && \
+		yum repolist && \
+		yum install -y vnstat
 
 # collect entrypoint
 COPY	ss.entrypoint.sh ./

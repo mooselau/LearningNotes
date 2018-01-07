@@ -8,7 +8,9 @@ RUN 	apt-get -y update && \
 		apt-get -y install git && \
 		pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 
-RUN 	apt-get -y install net-tools
+# install tools and vnstat to monitor network data flow
+# vnstat version 1.14
+RUN 	apt-get -y install net-tools vnstat
 
 # collect entrypoint
 COPY	ss.entrypoint.sh ./
