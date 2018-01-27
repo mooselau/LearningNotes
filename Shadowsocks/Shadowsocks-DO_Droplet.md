@@ -22,11 +22,11 @@
 目前网络上还是有很多教程来指导如何在DO上增添新的机器的。
 主要说来这个步骤就是注册DO并创建Droplet。
 
-<img src="../Images/Shadowsocks/DO-choose-a-image.png" width="80%" height="200">
+<img src="../Images/Shadowsocks/DO-choose-a-image.png" width="80%" height="80%">
 
 我选择的是CentOS的最新版本(7.3.1611 x64)，配置价格也是最便宜的5刀一个月。目前也是包含了单核 512MB的内存，20GB的SSD 以及1000GB的流量，应该说作为一个SS的机器完全足够了。(update: 目前，CentOS版本更新到了7.4，DO的最低配置也更新到了单核+1GB+25GB SSD+1TB流量。)
 
-<img src="../Images/Shadowsocks/DO-Choose-a-size.png" width="60%" height="220">
+<img src="../Images/Shadowsocks/DO-Choose-a-size.png" width="60%" height="60%">
 
 DataCenter选择的是新加坡地区。(日本的机器可能会更快一点，可惜这里没有看到日本的选项。)
 P.S.关于SSH Keys，我自己也没太弄懂。。所以创建了之后还是通过邮件重新设置了登录密码。。后期还是手动添加了ssh private key，来方便自己的机器登录。
@@ -115,7 +115,7 @@ docker run -d --name ss --hostname ss -p 8388:8388 -p 1080:1080 shadowsocks
 docker ps
 ```
 
-<img src="../Images/Shadowsocks/Docker-ps-result.png" width="50%" height="100">
+<img src="../Images/Shadowsocks/Docker-ps-result.png" width="50%" height="50%">
 
 以及查看logs来确认Shadowsocks的服务状况：
 ```docker
@@ -135,21 +135,21 @@ PC端(Windows)跟MacOS的client比较相似，所以就以MAC为介绍对象了�
 Andriod手机端，可以通过Google Play安装Shadowsocks客户端来使用我们配置好的SS服务器。
 配置截图：
 
-<img src="../Images/Shadowsocks/SS-Andriod-1.jpg" width="30%" height="430">
+<img src="../Images/Shadowsocks/SS-Andriod-1.jpg" width="30%" height="30%">
 
 连接结果：
 
-<img src="../Images/Shadowsocks/SS-Andriod-2.jpg" width="30%" height="430">
+<img src="../Images/Shadowsocks/SS-Andriod-2.jpg" width="30%" height="30%">
 
 #### PC/MAC端
 MAC端的Client名称叫做“ShadowsocksX”，我用的版本是2.6.3。貌似这个版本跟之前更早的版本所具有的功能不太一样，这使得我们不能够自定义本地开放的端口。（同时也不确定它默认开放的是不是1080，另外所有的log需要在系统log中搜索查看。）
 SSX主界面：
 
-<img src="../Images/Shadowsocks/ShadowsocksX.png" width="20%" height="260">
+<img src="../Images/Shadowsocks/ShadowsocksX.png" width="20%" height="20%">
 
 SSX服务器配置：
 
-<img src="../Images/Shadowsocks/ShadowsocksX-2.png" width="50%" height="300">
+<img src="../Images/Shadowsocks/ShadowsocksX-2.png" width="50%" height="50%">
 
 在两个月之前，仅仅使用SSX还可以连接上SS Server，不过之后就一直连接不上。系统log也没有查看到相应的信息，所以我自己的机器上目前主要在使用GoAgent+SwitchyOmega来确保成功连接。
 
@@ -159,11 +159,11 @@ SSX服务器配置：
 第一步需要从网上下载GoAgent，我目前使用的版本是v2.3.7(build 774)。
 新建并配置好服务器信息：
 
-<img src="../Images/Shadowsocks/GoAgent-Setup.png" width="45%" height="320">
+<img src="../Images/Shadowsocks/GoAgent-Setup.png" width="45%" height="45%">
 
 “Turn On”连接，查看logs：
 
-<img src="../Images/Shadowsocks/GoAgent-StartLogs.png" width="60%" height="370">
+<img src="../Images/Shadowsocks/GoAgent-StartLogs.png" width="60%" height="60%">
 
 由于这里可以指定本地端口，所以可以输入其他有效的端口。
 
@@ -171,26 +171,26 @@ SSX服务器配置：
 
 新建一个Profile “proxy”，然后设置一下默认的代理方式跟端口：
 
-<img src="../Images/Shadowsocks/SwitchyOmega-1.png" width="80%" height="410">
+<img src="../Images/Shadowsocks/SwitchyOmega-1.png" width="80%" height="80%">
 
 在“auto-switch”中，设置RuleList。Rule List URL: https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt .
 
-<img src="../Images/Shadowsocks/SwitchyOmega-2.png" alt="SO-RuleList" width="80%" height="450">
+<img src="../Images/Shadowsocks/SwitchyOmega-2.png" alt="SO-RuleList" width="80%" height="80%">
 
 最后，选中SwitchyOmega的auto-switch模式：
 
-<img src="../Images/Shadowsocks/SwitchyOmega-3.png" alt="SO-SelectMode" width="20%" height="240">
+<img src="../Images/Shadowsocks/SwitchyOmega-3.png" alt="SO-SelectMode" width="20%" height="20%">
 
 这样，所有需要代理的站点将会自动走proxy（即通过本地1080端口来对接上GoAgent，而GoAgent这时已经连接上我们的SS Server了），其他站点则会使用直接访问。
 
 #### 连接测试
 连接网站，再次查看GoAgent的log：
 
-<img src="../Images/Shadowsocks/GoAgent-NormalLogs.png" alt="GoAgent-logs" width="60%" height="420">
+<img src="../Images/Shadowsocks/GoAgent-NormalLogs.png" alt="GoAgent-logs" width="60%" height="60%">
 
 至此，MAC端也连接成功了。
 
-<img src="../Images/Shadowsocks/Hello World.png" alt="HelloWorld" width="70%" height="420">
+<img src="../Images/Shadowsocks/Hello World.png" alt="HelloWorld" width="70%" height="70%">
 
 ### 小结
 其实网上相应的教程非常多，每位作者所站的角度跟高度不一样，写下来的文字也会有所不同。作为一个初学者，我将这个过程写下来，一方面留作以后修改时回忆用，一方面还可以将自己所了解、所尝试的方法分享给大家，方便大家在需要的时候借鉴参考。如果有任何错误或者不恰当的地方，还请大家指正、交流。
