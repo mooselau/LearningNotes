@@ -1,2 +1,2 @@
 # LearningNotes
-Sort of a notebook on many things..
+Sort of a notebook on many things...
