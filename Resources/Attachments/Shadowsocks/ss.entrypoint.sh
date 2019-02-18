@@ -33,6 +33,9 @@ else
 	echo "Config file found.."
 fi
 
+# start vnstat daemon, no matter if it is container restarting..
+service vnstat restart
+
 echo "Starting Service.."
 
  # To run SS in the foreground:
