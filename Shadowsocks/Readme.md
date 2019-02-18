@@ -1,7 +1,10 @@
 ## Shadowsocks Deploy & Docker & Digital Ocean Droplet
 Author: @mooseliu@hotmail.co.uk
+
 Created Date: 20.02.2017
+
 Modified Date: 18.02.2019
+
 因为考虑到自己随时随地需要查找信息的必要性，就在前段时间搜罗了一下一些可用的科学上网工具，虽然Lantern依然免费，但是不够稳定的速度实在是令人尴尬；VPN也是一样，之前无脑地购买了PureVPN，结果发现它早早就被屏蔽了。综合考虑之下，决定自行购买机器搭建个私人的隧道来保证日常使用。
 这篇文章会主要用来介绍自己在DO上搭建Shadowsocks(SS)的过程，后期会不间断更新完善。。
 附上SS的地址：https://github.com/shadowsocks, https://shadowsocks.org/en/index.html。
