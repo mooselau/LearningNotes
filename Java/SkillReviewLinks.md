@@ -5,6 +5,7 @@ Links that are necessary to go over before entering interviews:
         + Locks
             * ReentrantLock & Condition, see [link1](https://blog.csdn.net/vernonzheng/article/details/8288251), [link2](https://www.jianshu.com/p/f207e85d0238)
             * synchronized
+                - "Double-checked" locking, see [link](https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html)
         + Multi-threading
             * ThreadPool
                 - ThreadPoolSize, see [link](https://mp.weixin.qq.com/s/RcsGOUtWQKO7w2BZNb8NzQ)
@@ -13,10 +14,10 @@ Links that are necessary to go over before entering interviews:
             * Binary Search Tree
         + JVM and JMM
             * JVM structure
-            * JMM concept
+            * JMM concept, see [link](https://blog.csdn.net/javazejian/article/details/72772461)
         + GC
             * GC Root
-            * Parallel GC, CMS
+            * Parallel GC, CMS, see [link](http://www.importnew.com/1993.html)
             * G1GC
         + Other
             * WeakReference, see [link](https://mp.weixin.qq.com/s/TyM-zD2Irxk_BzS_D6I0KA)
