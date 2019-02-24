@@ -10,7 +10,7 @@ Links that are necessary to go over before entering interviews:
             * Thread
                 - Daemon Thread
                 - Timer
-                - ThreadLocal
+                - ThreadLocal, seee [link](https://www.cnblogs.com/jasongj/p/8079718.html)
             * ThreadPool
                 - ThreadPoolSize, see [link](https://mp.weixin.qq.com/s/RcsGOUtWQKO7w2BZNb8NzQ)
         + Data Type
@@ -44,6 +44,7 @@ Links that are necessary to go over before entering interviews:
 
 * Networking
     - RESTful & SOAP
+        + WebServices
     - Socket
     - TCP & UDP
     - HTTP / HTTPs
@@ -55,7 +56,7 @@ Links that are necessary to go over before entering interviews:
 
 * Database
     - MySQL
-        + Index Type
+        + Index, see [link](https://blog.csdn.net/tongdanping/article/details/79878302)
     - NoSQL
 
 * Container Techniques(DevOps)
@@ -63,13 +64,14 @@ Links that are necessary to go over before entering interviews:
     - Docker
     - Kubernetes, Helm
 
-* Architecture(*)
+* Architecture and Design
     - 互联网下的高并发架构, see [link](http://blog.thankbabe.com/2016/09/14/high-concurrency-scheme/)
-    - 幂等性
+    - 幂等性/API Idempotency, see [link1](https://www.jianshu.com/p/6707cbc4b294?from=timeline), [link2](https://www.jianshu.com/p/b8c19cbeede4)
+    - 一致性Hash, see [link1](https://www.cnblogs.com/xrq730/p/5186728.html), [link2](https://www.jianshu.com/p/e968c081f563), [link3](https://www.toptal.com/big-data/consistent-hashing)
+    - 数据一致性/Consistency in Distributed Systems, see [link](https://blog.csdn.net/hxpjava1/article/details/79409459)
 
 * Interview Questions
     - Java面试题(General), see [link](https://blog.csdn.net/d12345678a/article/details/54376914)
-        + 一致性Hash, see [link](https://www.cnblogs.com/xrq730/p/5186728.html)
     - Java算法题(Algorithms), see [link](https://www.zhihu.com/question/24964987)
         + Sorting, see [link](https://www.cnblogs.com/onepixel/articles/7674659.html)
         + 最大堆/最小堆, see [link](https://www.cnblogs.com/zf-blog/p/9010977.html)
