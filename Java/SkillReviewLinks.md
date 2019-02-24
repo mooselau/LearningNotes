@@ -26,7 +26,9 @@ Links that are necessary to go over before entering interviews:
             * GC Root, see [link](https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/)
             * Parallel GC, CMS, see [link](http://www.importnew.com/1993.html)
             * G1GC, see [link](https://www.oracle.com/technetwork/tutorials/tutorials-1876574.html)
+        + Reflection
         + Other
+            * Java Delegation, Classloader, see[link](https://www.cnblogs.com/wxd0108/p/6681618.html)
             * WeakReference, see [link](https://mp.weixin.qq.com/s/TyM-zD2Irxk_BzS_D6I0KA)
     - Java Framework
         + Spring and SpringBoot
@@ -67,7 +69,7 @@ Links that are necessary to go over before entering interviews:
 * Architecture and Design
     - 互联网下的高并发架构, see [link](http://blog.thankbabe.com/2016/09/14/high-concurrency-scheme/)
     - 幂等性/API Idempotency, see [link1](https://www.jianshu.com/p/6707cbc4b294?from=timeline), [link2](https://www.jianshu.com/p/b8c19cbeede4)
-    - 一致性Hash, see [link1](https://www.cnblogs.com/xrq730/p/5186728.html), [link2](https://www.jianshu.com/p/e968c081f563), [link3](https://www.toptal.com/big-data/consistent-hashing)
+    - 一致性Hash, see [link1](https://www.jianshu.com/p/e968c081f563), [link2](https://www.toptal.com/big-data/consistent-hashing), [link3](https://www.cnblogs.com/xrq730/p/5186728.html)
     - 数据一致性/Consistency in Distributed Systems, see [link](https://blog.csdn.net/hxpjava1/article/details/79409459)
 
 * Interview Questions
