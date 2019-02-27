@@ -5,12 +5,12 @@ Links that are necessary to go over before entering interviews:
         + Locks
             * ReentrantLock & Condition, see [link1](https://blog.csdn.net/vernonzheng/article/details/8288251), [link2](https://www.jianshu.com/p/f207e85d0238)
             * synchronized
-                - "Double-checked" locking, see [link](https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html)
+                - "Double-checked" locking issue, see [link](https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html)
         + Multi-threading
             * Thread
                 - Daemon Thread
-                - Timer
-                - ThreadLocal, seee [link](https://www.cnblogs.com/jasongj/p/8079718.html)
+                - Timer and TimerTask
+                - ThreadLocal, see [link](https://www.cnblogs.com/jasongj/p/8079718.html)
             * ThreadPool
                 - ThreadPoolSize, see [link](https://mp.weixin.qq.com/s/RcsGOUtWQKO7w2BZNb8NzQ)
             * AQS, see [link](https://www.jianshu.com/p/da9d051dcc3d)
@@ -33,6 +33,8 @@ Links that are necessary to go over before entering interviews:
             * WeakReference, see [link](https://mp.weixin.qq.com/s/TyM-zD2Irxk_BzS_D6I0KA)
     - Java Framework
         + Spring and SpringBoot
+            * IoC
+            * AOP
     - Design Patterns
         + Singleton
         + Factory
@@ -77,5 +79,5 @@ Links that are necessary to go over before entering interviews:
     - Java面试题(General), see [link](https://blog.csdn.net/d12345678a/article/details/54376914)
     - Java算法题(Algorithms), see [link](https://www.zhihu.com/question/24964987)
         + Sorting, see [link](https://www.cnblogs.com/onepixel/articles/7674659.html)
-        + 最大堆/最小堆, see [link](https://www.cnblogs.com/zf-blog/p/9010977.html)
+        + 最大堆/最小堆, see [link](https://www.jianshu.com/p/62b651797ad8)
 
