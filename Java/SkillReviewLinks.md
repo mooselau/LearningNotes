@@ -13,6 +13,7 @@ Links that are necessary to go over before entering interviews:
                 - ThreadLocal, seee [link](https://www.cnblogs.com/jasongj/p/8079718.html)
             * ThreadPool
                 - ThreadPoolSize, see [link](https://mp.weixin.qq.com/s/RcsGOUtWQKO7w2BZNb8NzQ)
+            * AQS, see [link](https://www.jianshu.com/p/da9d051dcc3d)
         + Data Type
             * Atomic related type
                 - Thread-safe and CAS
