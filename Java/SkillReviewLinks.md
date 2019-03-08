@@ -5,7 +5,7 @@ Links that are necessary to go over before entering interviews:
         + Locks
             * ReentrantLock & Condition, see [link1](https://blog.csdn.net/vernonzheng/article/details/8288251), [link2](https://www.jianshu.com/p/f207e85d0238)
             * synchronized
-                - "Double-checked" locking issue, see [link](https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html)
+                - "Double-checked" locking issue, see [link](https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html) 
         + Multi-threading
             * Thread
                 - Daemon Thread
