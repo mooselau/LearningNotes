@@ -16,6 +16,7 @@ In a nutshell, you don't need UTF-16 anywhere unless it has been already been ad
 
 Java program invoked by web browsers uses UTF-16 but the web browser sends characters using UTF-8.
 
+see [ASCII Table](https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html)
 see [Stackoverflow Qs](https://stackoverflow.com/questions/2241348/what-is-unicode-utf-8-utf-16)
 see [Kunststube's article](http://kunststube.net/encoding/)
 
