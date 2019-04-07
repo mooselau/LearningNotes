@@ -50,6 +50,7 @@ Links that are necessary to go over before entering interviews:
 * Networking
     - RESTful & SOAP
         + WebServices
+        + RESTful API, see [link](https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
     - Socket
     - TCP & UDP
     - HTTP / HTTPs
