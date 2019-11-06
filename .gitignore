@@ -1,0 +1,16 @@
+# For Eclipse
+.project
+.classpath
+.settings/
+target/
+
+# For Intellij
+.idea
+*.iml
+src/main/test/
+rebel.xml
+*.DS_Store
+/.classpath
+/.project
+/.settings/
+
