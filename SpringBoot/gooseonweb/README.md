@@ -1,5 +1,11 @@
 ## Goose On Web
-This is a typical project focusing on main issues and popular usages with SpringBoot.
+This is a typical project focusing on main programming issues and popular usages with SpringBoot.
+
+* Issue Topics
+    * SpringBoot necessities
+    * Exception Handler
+    * Internationalization
+        * I18N and Messages
 
 ```xml
 <!-- Project Info -->
@@ -9,8 +15,8 @@ This is a typical project focusing on main issues and popular usages with Spring
     ...
 </project>
 ```
-### Issues and solutions
 
+### Issue Topics
 #### SpringBoot necessities
 Generally speaking, SpringBoot project is always a maven project.
 To start this maven project with SpringBoot, we needs below dependencies: 
