@@ -2,41 +2,17 @@
 
 The Book on Git Guide: https://git-scm.com/book/en/v2 .
 
-```
-// update README
-$ git add README   
+```shell
+# make several commits into one
+$ git reset HEAD^^^ (reset head to the 3rd last commit)
+$ git add (then add all modifications again)
+$ git commit (commit changes)
 
-// commit the updates and comment this commit
-$ git commit -m 'first commit'
-```
+# way two:
+$ git rebase -i HEAD~#{number of commits} 
+# within the next page, pickup the last commit you want, and squash other commit if we need, then complete rebase with new commit, after that all needed commits should be in one commit.
+$ git log (check the latest commit)
 
-
-```
-// connect to remote github project
-$ git remote add origin git@github.com:defnngj/hello-world.git   
-
-// update github's project with local files
-$ git push -u origin master  
-```
-
-----------------------------TroubleShooting----------------------------------
-
-
-```
-$ git remote addorigin git@github.com:defnngj/hello-world.git
-// Error ： fatal: remote origin already exists.
-
-// fix way:
-$ git remote rm origin
-
-// do it again: 
-$ git remote add origin git@github.com:defnngj/hello-world.git 
-```
-
-```
-$ git push origin master
-// Error ：error:failed to push som refs to.......
-
-// fix way:
-$ git pull origin master //先把远程服务器github上面的文件拉先来，再push 上去。
+# show one commit changed files
+$ git show --pretty=""  --name-only f7748e47a1a70f004068be4642d04166f47cc692
 ```
