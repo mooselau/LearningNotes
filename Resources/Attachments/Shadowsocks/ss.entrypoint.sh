@@ -15,6 +15,9 @@ if [ ! -e "/etc/shadowsocks.json" ] ; then
 	echo "Creating database for vnstatd.."
 	vnstat --create -i $network_iface
 
+    echo "Starting monitoring traffic.."
+    vnstat -u -i $network_iface
+
 	echo "Generating config file for SS.."
 	# Create config file
 	touch /etc/shadowsocks.json
