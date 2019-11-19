@@ -10,7 +10,7 @@ $ git commit (commit changes)
 
 # way two:
 $ git rebase -i HEAD~#{number of commits} 
-# within the next page, pickup the last commit you want, and squash other commit if we need, then complete rebase with new commit, after that all needed commits should be in one commit.
+# e.g. "git rebase -i HEAD~5". Then within the next page, pickup the last commit you want, and squash other commit if we need, then complete rebase with new commit, after that all needed commits should be in one commit.
 $ git log (check the latest commit)
 
 # show one commit changed files
