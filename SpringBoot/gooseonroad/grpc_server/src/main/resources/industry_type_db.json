@@ -1,0 +1,148 @@
+{
+  "industryType": [
+    {
+      "mccCode": "4215",
+      "mccName": "快递服务（空运、地面运输或海运）"
+    },
+    {
+      "mccCode": "4511",
+      "mccName": "航空公司"
+    },
+    {
+      "mccCode": "4814",
+      "mccName": "电信服务，包括本地和长途电话、信用卡电话、磁卡电话和传真"
+    },
+    {
+      "mccCode": "4816",
+      "mccName": "计算机网络/信息服务"
+    },
+    {
+      "mccCode": "4900",
+      "mccName": "公共事业（电力、煤气、自来水、清洁服务）"
+    },
+    {
+      "mccCode": "5065",
+      "mccName": "电器零件和设备（批发商）"
+    },
+    {
+      "mccCode": "5111",
+      "mccName": "文具、办公用品、复印纸和书写纸（批发商）"
+    },
+    {
+      "mccCode": "5251",
+      "mccName": "五金商店"
+    },
+    {
+      "mccCode": "5311",
+      "mccName": "百货商店"
+    },
+    {
+      "mccCode": "5398",
+      "mccName": "大型企业批发"
+    },
+    {
+      "mccCode": "5399",
+      "mccName": "其他综合零售(各类日用品)"
+    },
+    {
+      "mccCode": "5499",
+      "mccName": "各类食品店及专门食品零售店"
+    },
+    {
+      "mccCode": "5641",
+      "mccName": "婴儿、儿童服装店"
+    },
+    {
+      "mccCode": "5699",
+      "mccName": "各类服装及饰物店"
+    },
+    {
+      "mccCode": "5714",
+      "mccName": "帏帐、窗帘、室内装潢商店"
+    },
+    {
+      "mccCode": "5734",
+      "mccName": "计算机软件商店"
+    },
+    {
+      "mccCode": "5912",
+      "mccName": "药房、药店"
+    },
+    {
+      "mccCode": "5941",
+      "mccName": "体育用品店"
+    },
+    {
+      "mccCode": "5942",
+      "mccName": "书店"
+    },
+    {
+      "mccCode": "5992",
+      "mccName": "花店"
+    },
+    {
+      "mccCode": "5998",
+      "mccName": "其他批发商"
+    },
+    {
+      "mccCode": "6012",
+      "mccName": "金融机构－商品和服务"
+    },
+    {
+      "mccCode": "6300",
+      "mccName": "保险销售、保险业和保险金"
+    },
+    {
+      "mccCode": "7230",
+      "mccName": "美容理发店"
+    },
+    {
+      "mccCode": "7299",
+      "mccName": "未列入其他代码的其他个人服务"
+    },
+    {
+      "mccCode": "7375",
+      "mccName": "信息检索服务"
+    },
+    {
+      "mccCode": "7379",
+      "mccName": "未列入其他代码的计算机维护和修理服务"
+    },
+    {
+      "mccCode": "7399",
+      "mccName": "未列入其他代码的商业服务"
+    },
+    {
+      "mccCode": "7922",
+      "mccName": "戏剧制片（不含电影）、演出和票务"
+    },
+    {
+      "mccCode": "7993",
+      "mccName": "电子游戏供给"
+    },
+    {
+      "mccCode": "7995",
+      "mccName": "彩票销售"
+    },
+    {
+      "mccCode": "8062",
+      "mccName": "公立医院"
+    },
+    {
+      "mccCode": "8220",
+      "mccName": "普通高校（公立）"
+    },
+    {
+      "mccCode": "8299",
+      "mccName": "其他学校和教育服务"
+    },
+    {
+      "mccCode": "8398",
+      "mccName": "慈善和社会公益服务组织"
+    },
+    {
+      "mccCode": "8651",
+      "mccName": "政治组织（政府机构）"
+    }
+  ]
+}
