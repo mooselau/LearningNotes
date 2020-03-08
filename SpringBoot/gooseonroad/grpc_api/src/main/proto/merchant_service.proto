@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_package = "io.grpc.example.merchantservice";
+
+import "google/protobuf/empty.proto";
+
+package merchantservice;
+
+service MerchantService {
+    // normal
+    rpc getMerchantIndustryTypes (google.protobuf.Empty) returns (IndustryTypes) {}
+    // client-side streaming api
+    rpc getMerchantIndustryTypeList (google.protobuf.Empty) returns (stream IndustryType) {}
+}
+
+message IndustryType {
+    string mccCode = 1;
+    string mccName = 2;
+}
+
+message IndustryTypes {
+    repeated IndustryType industryType = 1;
+}

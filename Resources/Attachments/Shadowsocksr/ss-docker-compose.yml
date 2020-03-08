@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ss:
+    image: ubuntu/ss:3.0.0
+    ports:
+      - "8388:8388"
+    environment:
+      - password = password
+      - server_port = 8388
+      - local_port = 1080
+      - network_iface = eth0
