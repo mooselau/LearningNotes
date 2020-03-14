@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -33,6 +34,13 @@ public class DemoController {
     @GetMapping("/employee/{id}")
     public JustResponse getEmployee(@PathVariable Long id) {
         Employee employee = demoService.getEmployee(id);
+        return new JustResponse<Employee>(employee);
+    }
+
+    @GetMapping("/employee/")
+    public JustResponse getEmployee(@RequestParam(value = "name") String name, @RequestParam(value = "age") int age,
+                                    @RequestParam(value = "jobTitle") String jobTitle) {
+        Employee employee = demoService.getEmployee(name, age, jobTitle);
         return new JustResponse<Employee>(employee);
     }
 
