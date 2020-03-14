@@ -1,6 +1,6 @@
 package demo.rabbitmq;
 
-import demo.aop.User;
+import demo.model.User;
 
 public interface RabbitMqService {
     public void sendMsg(String msg);

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-//@ConfigurationProperties("rabbitmq.queue")
+//@ConfigurationProperties("demo.rabbitmq.queue")
 public class RabbitMqConfig {
 
     @Value("spring-boot-queue-msg")

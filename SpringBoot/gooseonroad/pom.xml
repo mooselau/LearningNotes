@@ -21,9 +21,11 @@
         <module>grpc_client</module>
         <module>springboot_jpa_h2</module>
         <module>springboot</module>
+        <module>springboot_mq</module>
     </modules>
 
     <properties>
+        <java.version>1.8</java.version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
