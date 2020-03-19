@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
+import javax.persistence.PreRemove;
 import javax.persistence.PreUpdate;
 import javax.persistence.Version;
 
@@ -18,12 +19,12 @@ public class baseEntity {
     @Id // necessary for default primary key
     @GeneratedValue(strategy = GenerationType.AUTO) // one of Generation strategy
     private Long id;
-    @Version // version for this entity, related to db locking
+    @Version // version for this entity, related to db locking, related to internal query
     private Integer version;
     private Long time_created;
     private Long time_updated;
     private Long time_deleted;
-    private Boolean is_deleted;
+    private Boolean is_deleted = false;
 
     @PrePersist // useful for some fields related
     public void prePersist() {
@@ -38,6 +39,11 @@ public class baseEntity {
     @PreUpdate // useful for some fields
     public void preUpdate() {
         time_updated = System.currentTimeMillis();
+    }
+
+    @PreRemove
+    public void preDelete() {
+        time_deleted = System.currentTimeMillis();
     }
 
 }

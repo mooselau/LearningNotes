@@ -55,4 +55,28 @@ public class DemoService {
     public Employee getEmployee(String employeeName, int age, String jobTitle) {
         return empolyeeRepository.findByNameAndAgeAndJobTitle(employeeName, age, jobTitle);
     }
+
+    public Long promoteEmployee(String jobTitle, Long salary, Long employeeId) {
+        int rows = empolyeeRepository.setJobTitleAndSalary(jobTitle, salary, employeeId, System.currentTimeMillis());
+        assert rows == 1;
+        return employeeId;
+    }
+
+    public Long updateEmployeeAddress(String address, Long employeeId) {
+        Employee employee = empolyeeRepository.findById(employeeId).orElseThrow(RuntimeException::new);
+        employee.setAddress(address);
+        empolyeeRepository.save(employee);
+        return employeeId;
+    }
+
+    public void deleteEmployee(Long employeeId) {
+        Employee employee = empolyeeRepository.findById(employeeId).orElse(null);
+        empolyeeRepository.delete(employee);
+        return ;
+    }
+
+    public void deleteEmployeeById(Long employeeId) {
+        empolyeeRepository.deleteById(employeeId);
+        return ;
+    }
 }
