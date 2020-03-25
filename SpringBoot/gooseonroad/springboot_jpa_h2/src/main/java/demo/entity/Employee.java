@@ -3,7 +3,6 @@ package demo.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.Entity;
@@ -14,7 +13,8 @@ import javax.persistence.ManyToOne;
 @Setter
 @Entity
 @NoArgsConstructor
-@SQLDelete(sql = " UPDATE employee SET is_deleted = true WHERE id = ? AND version = ? ")
+// To use SQLDelete to udpate time_deleted, we need consider to use LocalDateTime instead of Long on Field related to time.
+//@SQLDelete(sql = " UPDATE employee SET is_deleted = true WHERE id = ? AND version = ? ")
 @Where(clause = " is_deleted = false ")
 public class Employee extends baseEntity {
     private String name;

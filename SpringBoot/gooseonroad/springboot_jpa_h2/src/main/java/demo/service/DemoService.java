@@ -18,6 +18,9 @@ public class DemoService {
     @Autowired
     private CompanyRepository companyRepository;
 
+    /********************************
+                Company
+     ******************************/
     public Long createCompany(String companyName, String companyAddress) {
         Company company = new Company();
         company.setName(companyName);
@@ -26,6 +29,13 @@ public class DemoService {
         return company.getId();
     }
 
+    public Company getCompany(Long companyId) {
+        return companyRepository.findById(companyId).orElse(null);
+    }
+
+    /********************************
+                Employee
+     ******************************/
     public Long createEmployee(String name, int age, String address, long companyId, String jobTitle, long salary) {
         Company company = companyRepository.findById(companyId).orElse(null);
         Employee employee = new Employee();
@@ -39,21 +49,20 @@ public class DemoService {
         return employee.getId();
     }
 
-    public Company getCompany(Long companyId) {
-        return companyRepository.findById(companyId).orElse(null);
-    }
-
     public Employee getEmployee(Long employeeId) {
         return empolyeeRepository.findById(employeeId).orElse(null);
     }
 
-    public List<Employee> getEmployee(String employeeName) {
-//        return empolyeeRepository.findAllByEmployeeName(employeeName);
-        return empolyeeRepository.findAllByName(employeeName);
-    }
-
     public Employee getEmployee(String employeeName, int age, String jobTitle) {
         return empolyeeRepository.findByNameAndAgeAndJobTitle(employeeName, age, jobTitle);
+    }
+
+    public List<Employee> getAllEmployee(Long companyId) {
+        return empolyeeRepository.findAllByCompanyId(companyId);
+    }
+
+    public List<Employee> getAllEmployeeWithNativeQuery(Long companyId) {
+        return empolyeeRepository.findAllEmployeeWithNativeQuery(companyId);
     }
 
     public Long promoteEmployee(String jobTitle, Long salary, Long employeeId) {
@@ -71,12 +80,10 @@ public class DemoService {
 
     public void deleteEmployee(Long employeeId) {
         Employee employee = empolyeeRepository.findById(employeeId).orElse(null);
-        empolyeeRepository.delete(employee);
-        return ;
+        Long currentTimeMillis = System.currentTimeMillis();
+        empolyeeRepository.delete(currentTimeMillis, employee.getId());
+//        empolyeeRepository.delete(employee);
+        return;
     }
 
-    public void deleteEmployeeById(Long employeeId) {
-        empolyeeRepository.deleteById(employeeId);
-        return ;
-    }
 }
