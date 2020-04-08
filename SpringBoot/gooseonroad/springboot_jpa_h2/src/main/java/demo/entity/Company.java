@@ -12,7 +12,7 @@ import javax.persistence.Entity;
 @Setter
 @Entity
 @NoArgsConstructor
-@SQLDelete(sql = " UPDATE company SET is_deleted = true WHERE id = ? AND version = ? ")
+@SQLDelete(sql = " UPDATE company SET isDeleted = true WHERE id = ? AND version = ? ")
 @Where(clause = " is_deleted = false ")
 public class Company extends baseEntity {
     private String name;

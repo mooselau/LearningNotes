@@ -15,6 +15,7 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 // To use SQLDelete to udpate time_deleted, we need consider to use LocalDateTime instead of Long on Field related to time.
 //@SQLDelete(sql = " UPDATE employee SET is_deleted = true WHERE id = ? AND version = ? ")
+// BTW, Sqls in SQLDelete & Where are native query.
 @Where(clause = " is_deleted = false ")
 public class Employee extends baseEntity {
     private String name;

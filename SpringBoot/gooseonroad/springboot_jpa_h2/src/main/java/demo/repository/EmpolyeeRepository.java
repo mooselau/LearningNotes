@@ -14,22 +14,28 @@ public interface EmpolyeeRepository extends JpaRepository<Employee, Long> {
 
     List<Employee> findAllByCompanyId(Long companyId);
 
-    // native query will be executed directly in DB, will not append annotation like @Where
+    List<Employee> findAllByName(String name);
+
+    // native query will be executed directly in DB, will not trigger annotations like @Where, @Prexxx or @Postxxx
     @Query(value = " SELECT * FROM Employee WHERE company_id = ?1 ", nativeQuery = true)
     List<Employee> findAllEmployeeWithNativeQuery(Long companyId);
 
-    List<Employee> findAllByName(String name);
-
+    // find with multiple fields
     Employee findByNameAndAgeAndJobTitle(String name, int age, String jobTitle);
 
+    // (By) Order By field At DESC/ASC to fetch entries with order, e.g.: findAllByOrderByxxxDesc,
+    // findByAgeOrderByxxxAsc.
+    List<Employee> findAllByCompanyIdOrderByTimeCreatedDesc(Long companyId);
+
+    // multiple set in one update
     @Transactional
     @Modifying
-    @Query("UPDATE Employee e SET e.time_updated = ?4, e.jobTitle = ?1, e.salary = ?2 WHERE e.id = ?3")
+    @Query("UPDATE Employee e SET e.timeUpdated = ?4, e.jobTitle = ?1, e.salary = ?2 WHERE e.id = ?3")
     int setJobTitleAndSalary(String jobTitle, Long salary, Long employeeId, Long time);
 
     // this is manually soft delete api
     @Transactional
     @Modifying
-    @Query(" UPDATE Employee e SET e.is_deleted = true, e.time_deleted = ?1 WHERE id = ?2 " )
+    @Query(" UPDATE Employee e SET e.isDeleted = true, e.timeDeleted = ?1 WHERE id = ?2 ")
     int delete(Long currentTime, Long id);
 }

@@ -58,11 +58,18 @@ public class DemoService {
     }
 
     public List<Employee> getAllEmployee(Long companyId) {
-        return empolyeeRepository.findAllByCompanyId(companyId);
+        List<Employee> list = empolyeeRepository.findAllByCompanyId(companyId);
+        return list;
     }
 
     public List<Employee> getAllEmployeeWithNativeQuery(Long companyId) {
-        return empolyeeRepository.findAllEmployeeWithNativeQuery(companyId);
+        List<Employee> list = empolyeeRepository.findAllEmployeeWithNativeQuery(companyId);
+        return list;
+    }
+
+    public List<Employee> getAllEmployeeWithOrder(Long companyId) {
+        List<Employee> list = empolyeeRepository.findAllByCompanyIdOrderByTimeCreatedDesc(companyId);
+        return list;
     }
 
     public Long promoteEmployee(String jobTitle, Long salary, Long employeeId) {
@@ -81,9 +88,8 @@ public class DemoService {
     public void deleteEmployee(Long employeeId) {
         Employee employee = empolyeeRepository.findById(employeeId).orElse(null);
         Long currentTimeMillis = System.currentTimeMillis();
-        empolyeeRepository.delete(currentTimeMillis, employee.getId());
-//        empolyeeRepository.delete(employee);
-        return;
+        empolyeeRepository.delete(employee);
+//        empolyeeRepository.delete(currentTimeMillis, employee.getId());
     }
 
 }

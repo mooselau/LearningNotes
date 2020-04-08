@@ -3,6 +3,7 @@ package demo.entity;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,29 +22,33 @@ public class baseEntity {
     private Long id;
     @Version // version for this entity, related to db locking, related to internal query
     private Integer version;
-    private Long time_created;
-    private Long time_updated;
-    private Long time_deleted;
-    private Boolean is_deleted = false;
+    @Column(name = "time_created")
+    private Long timeCreated;
+    @Column(name = "time_updated")
+    private Long timeUpdated;
+    @Column(name = "time_deleted")
+    private Long timeDeleted;
+    @Column(name = "is_deleted")
+    private Boolean isDeleted = false;
 
     @PrePersist // useful for some fields related
     public void prePersist() {
-        if (time_created == null) {
-            time_created = System.currentTimeMillis();
+        if (timeCreated == null) {
+            timeCreated = System.currentTimeMillis();
         }
-        if (time_updated == null) {
-            time_updated = System.currentTimeMillis();
+        if (timeUpdated == null) {
+            timeUpdated = System.currentTimeMillis();
         }
     }
 
     @PreUpdate // useful for some fields
     public void preUpdate() {
-        time_updated = System.currentTimeMillis();
+        timeUpdated = System.currentTimeMillis();
     }
 
     @PreRemove
     public void preDelete() {
-        time_deleted = System.currentTimeMillis();
+        timeDeleted = System.currentTimeMillis();
     }
 
 }

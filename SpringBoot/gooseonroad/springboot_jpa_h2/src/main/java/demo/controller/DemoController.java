@@ -75,6 +75,12 @@ public class DemoController {
         return new JustResponse<List<Employee>>(employees);
     }
 
+    @GetMapping("/order-employees")
+    public JustResponse getOrderedEmployees(@RequestParam(value = "company") Long companyId) {
+        List<Employee> employees = demoService.getAllEmployeeWithOrder(companyId);
+        return new JustResponse<List<Employee>>(employees);
+    }
+
     /********************************
                 Admin
      ******************************/
