@@ -38,4 +38,7 @@ public interface EmpolyeeRepository extends JpaRepository<Employee, Long> {
     @Modifying
     @Query(" UPDATE Employee e SET e.isDeleted = true, e.timeDeleted = ?1 WHERE id = ?2 ")
     int delete(Long currentTime, Long id);
+
+    // count by usage
+    int countByCompanyIdAndAge(long companyId, int age);
 }

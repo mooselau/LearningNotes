@@ -91,6 +91,13 @@ public class DemoController {
         return new JustResponse<List<Employee>>(employees);
     }
 
+    @GetMapping("/admin/employee-count")
+    public JustResponse getEmployeesCount(@RequestParam(value = "company") Long companyId,
+                                          @RequestParam(value = "age") int age) {
+        int count = demoService.getEmployeesCount(age, companyId);
+        return new JustResponse(count);
+    }
+
     /********************************
                 Company
      ******************************/

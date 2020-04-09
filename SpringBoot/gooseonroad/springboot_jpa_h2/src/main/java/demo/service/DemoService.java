@@ -57,6 +57,11 @@ public class DemoService {
         return empolyeeRepository.findByNameAndAgeAndJobTitle(employeeName, age, jobTitle);
     }
 
+    public int getEmployeesCount(int age, Long companyId) {
+        int count = empolyeeRepository.countByCompanyIdAndAge(companyId, age);
+        return count;
+    }
+
     public List<Employee> getAllEmployee(Long companyId) {
         List<Employee> list = empolyeeRepository.findAllByCompanyId(companyId);
         return list;
