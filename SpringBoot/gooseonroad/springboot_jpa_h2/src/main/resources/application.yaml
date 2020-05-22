@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: staging
+    active: dev
 
 # Logging
 logging:

@@ -1,11 +1,6 @@
 package demo.controller;
 
-import demo.base.JustResponse;
-import demo.dto.CompanyDTO;
-import demo.dto.EmployeeDTO;
-import demo.entity.Company;
-import demo.entity.Employee;
-import demo.service.DemoService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +10,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import demo.base.JustResponse;
+import demo.dto.CompanyDTO;
+import demo.dto.EmployeeDTO;
+import demo.entity.Company;
+import demo.entity.Employee;
+import demo.service.DemoService;
 
 @RestController
 public class DemoController {
@@ -88,6 +87,7 @@ public class DemoController {
     @GetMapping("/admin/employees")
     public JustResponse getEmployeesForAdmin(@RequestParam(value = "company") Long companyId) {
         List<Employee> employees = demoService.getAllEmployeeWithNativeQuery(companyId);
+//        List<Employee> employees = demoService.getAllEmployeeWithJPQL(companyId);
         return new JustResponse<List<Employee>>(employees);
     }
 

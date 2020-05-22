@@ -1,13 +1,12 @@
 package demo.service;
 
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import demo.entity.Company;
 import demo.entity.Employee;
 import demo.repository.CompanyRepository;
 import demo.repository.EmpolyeeRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class DemoService {
@@ -69,6 +68,11 @@ public class DemoService {
 
     public List<Employee> getAllEmployeeWithNativeQuery(Long companyId) {
         List<Employee> list = empolyeeRepository.findAllEmployeeWithNativeQuery(companyId);
+        return list;
+    }
+
+    public List<Employee> getAllEmployeeWithJPQL(Long companyId) {
+        List<Employee> list = empolyeeRepository.findAllEmployeeWithJPQL(companyId);
         return list;
     }
 
