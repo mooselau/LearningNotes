@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserProperties {
 
-    @Value("${custom.property.name:defaultName}")
+    @Value("${custom.property.name:}")
     private String propertyName;
 
     @Value("${custom.property.num:18}")
