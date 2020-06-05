@@ -3,6 +3,7 @@ package demo.service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import demo.entity.Company;
 import demo.entity.Employee;
 import demo.repository.CompanyRepository;
@@ -87,6 +88,7 @@ public class DemoService {
         return employeeId;
     }
 
+    @Transactional
     public Long updateEmployeeAddress(String address, Long employeeId) {
         Employee employee = empolyeeRepository.findById(employeeId).orElseThrow(RuntimeException::new);
         employee.setAddress(address);
