@@ -7,7 +7,7 @@ public class EnumTester {
     }
 
     private void entrypoint(EType eType) {
-        System.out.println(EType.TYPEA.equals(eType));
+        System.out.println(EType.TYPEA.name());
     }
 
     private enum EType {
