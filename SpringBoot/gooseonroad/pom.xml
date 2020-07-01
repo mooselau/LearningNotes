@@ -22,6 +22,7 @@
         <module>springboot_jpa_h2</module>
         <module>springboot</module>
         <module>springboot_mq</module>
+        <module>springboot_redis</module>
     </modules>
 
     <properties>
