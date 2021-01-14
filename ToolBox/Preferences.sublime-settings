@@ -1,0 +1,13 @@
+{
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"A File Icon",
+		"Markdown",
+		"Vintage",
+		"zzz A File Icon zzz"
+	],
+	"show_definitions": false,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true
+}
