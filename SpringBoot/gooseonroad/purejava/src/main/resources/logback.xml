@@ -1,0 +1,62 @@
+<!-- turn debug=true on for logback-test.xml to help debug logging configurations. -->
+<configuration debug="false">
+
+    <!--
+    We prefer logging to console instead of a File. Its very easy
+    to pipe console output to a file and most organizations already
+    have a log rotation setup in place. It can also be faster to use this
+    approach vs using a FileAppender directly
+    -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are  by default assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Appender for Server log file output -->
+    <appender name="SERVER-FILE-AUDIT"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./purejava/logs/server.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!-- %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n-->
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </encoder>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>
+                ./purejava/logs/server.%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <maxFileSize>5MB</maxFileSize>
+            <maxHistory>5</maxHistory>
+            <totalSizeCap>50MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">
+        <syslogHost>logsene-syslog-receiver.sematext.com</syslogHost>
+        <port>514</port>
+        <facility>LOCAL0</facility>
+<!--        <suffixPattern>8582da95-0eca-498f-a78d-d0c503ef8f51:@cee: {"thread": "%thread", "message": "%msg"}</suffixPattern>-->
+        <suffixPattern>8582da95-0eca-498f-a78d-d0c503ef8f51:%thread - %message</suffixPattern>
+    </appender>
+
+    <!--
+    We prefer a default setting of WARN and turn on logging explicitly for
+    any packages we care about. INFO is also a good choice. Going lower than INFO
+    may log sensitive data such as passwords or api tokens via HTTP or networking
+    libraries. Remember these defaults impact third party libraries as well.
+
+    Often times the cost of logging is overlooked. Try a simple benchmark of
+    logging in a tight loop a few million iterations vs not logging and see the difference.
+    There are a few ways you can change logging levels on the fly in a running app.
+    This could be a better solution than over logging.
+    -->
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="SYSLOG"/>
+    </root>
+</configuration>

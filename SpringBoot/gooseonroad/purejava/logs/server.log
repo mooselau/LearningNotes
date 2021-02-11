@@ -1,0 +1,3 @@
+net.aqimp.exception.InternalException: Failed to send request
+        at net.aqimp.processor.agent.AQIFetchAgent.fetchAQI(AQIFetchAgent.java:81)
+        at net.aqimp.processor.agent.AQIUpdateAgent.doUpdating(AQIUpdateAgent.java:51)
